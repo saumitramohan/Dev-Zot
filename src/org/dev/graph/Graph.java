@@ -51,12 +51,12 @@ class Neighbor {
 					return v;
 				}
 			}
-			return 0;
+			return -1;
 		}
 		
 		private void dfs (int v, boolean[] visited) {
 			visited[v] = true;
-	        System.out.println("visiting " + adjLists[v].vertexName);
+	        System.out.println("Visiting " + adjLists[v].vertexName);
 	        for (Neighbor nbr = adjLists[v].adjList; nbr!=null; nbr=nbr.next) {
 	        	 if (!visited[nbr.vertexNum]) {
 	                 System.out.println("\n" + adjLists[v].vertexName + "--" + adjLists[nbr.vertexNum].vertexName);
@@ -86,13 +86,26 @@ class Neighbor {
 		        }
 		    }
 		 
+		 public boolean checkForRoute(String first, String Second) {
+			 int firstVertex = indexForName(first);
+			 int secondVertex = indexForName(Second);
+
+			 for (Neighbor nbr = adjLists[firstVertex].adjList;nbr !=null; nbr = nbr.next) {
+				 if (nbr.vertexNum == secondVertex) {
+					 return true;
+				 }
+			 }
+			 return false;
+		 }
+		 
 		 public static void main(String args[]) throws IOException {
 			 Scanner sc = new Scanner(System.in);
 		       	System.out.print("Enter graph input file name: ");
 		        String file = sc.next();
 		        Graph graph = new Graph(file);
-		        //graph.print();
-		        graph.dfs();
+		        graph.print();
+		        //graph.dfs();
+		        System.out.println(graph.checkForRoute("PageA", "PageC"));
 		    }
 		 
 
