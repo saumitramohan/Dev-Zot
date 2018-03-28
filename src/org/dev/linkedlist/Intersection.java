@@ -1,18 +1,21 @@
 package org.dev.linkedlist;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Intersection {
 	
-	/**
-	 * Definition for singly-linked list.
-	 * public class ListNode {
-	 *     int val;
-	 *     ListNode next;
-	 *     ListNode(int x) {
-	 *         val = x;
-	 *         next = null;
-	 *     }
-	 * }
-	 */
+	
+	 // Definition for singly-linked list.
+	   class ListNode {
+	      int val;
+	      ListNode next;
+	      ListNode(int x) {
+	          val = x;
+	          next = null;
+	      }
+	  }
+	 
 	    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
 	        Set <ListNode> set = new HashSet <ListNode>();
 	        while (headA != null){

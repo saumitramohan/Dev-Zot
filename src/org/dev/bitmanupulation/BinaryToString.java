@@ -17,7 +17,6 @@ public class BinaryToString {
 			sb.append(Binary2String(inputInteger));
 		}
 		System.out.println(sb.toString());
-
 	}
 
 	private static String Binary2String(double inputDouble) {

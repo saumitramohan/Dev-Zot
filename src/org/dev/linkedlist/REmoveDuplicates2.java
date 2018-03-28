@@ -11,6 +11,7 @@ public class REmoveDuplicates2 {
 	 * }
 	 */
 	class Solution {
+		
 	    public ListNode deleteDuplicates(ListNode head) {
 	    LinkedHashMap<Integer,Integer> hm=new LinkedHashMap<Integer,Integer>();    
 	        ListNode currentNode = head;
@@ -40,5 +41,6 @@ public class REmoveDuplicates2 {
 	        return n_head.next;
 	}
 	}
+	
 
 }

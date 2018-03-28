@@ -3,6 +3,13 @@ package org.dev.string;
 public class StringCompression {
 	public static void main(String args[]) { 
 	char chars[] = {'a','a','b','b','b','c','c'};
+	String str = "Saumi";
+	str += "123";
+	String str2 = "Saumi";
+	System.out.println(str+" : "+str.hashCode());
+	System.out.println(str2+" : "+str2.hashCode());
+
+
 	String result = compressString(chars);
 	System.out.println(result);
 	}
