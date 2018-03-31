@@ -25,7 +25,7 @@ class Neighbor {
 	
 	public class Graph {
 		Vertex[] adjLists;
-		public Graph (String file) throws FileNotFoundException{
+		public Graph (String file) throws FileNotFoundException {
 			Scanner sc = new Scanner(new File(file));
 			String graphType = sc.next();
 			boolean undirected = true;
