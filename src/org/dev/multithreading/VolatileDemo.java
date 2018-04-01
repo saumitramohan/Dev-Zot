@@ -2,7 +2,7 @@ package org.dev.multithreading;
 
 import java.util.Scanner;
 
-class Runnable extends Thread {
+class Run extends Thread {
 
 	private volatile boolean running = true;
 
@@ -22,7 +22,7 @@ public class VolatileDemo {
 
 	public static void main(String args[]) {
 		
-		Runnable runnable = new Runnable();
+		Run runnable = new Run();
 		System.out.println("Press Enter key to stop");
 		runnable.start();
 		
